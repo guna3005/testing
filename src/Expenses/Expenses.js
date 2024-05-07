@@ -14,7 +14,7 @@ const Expenses = () => {
 
     const fetchExpenses = async () => {
         try {
-            const response = await axios.get('http://localhost:5001/expenses', { withCredentials: true });
+            const response = await axios.get('http://159.203.162.71:5001/expenses', { withCredentials: true });
             setExpenses(response.data);
         } catch (error) {
             console.error("Failed to fetch expenses:", error);
@@ -32,7 +32,7 @@ const Expenses = () => {
     };
 
     const submitExpense = async () => {
-        const url = editing ? `http://localhost:5001/update-expense/${newExpense._id}` : 'http://localhost:5001/add-expense';
+        const url = editing ? `http://159.203.162.71:5001/update-expense/${newExpense._id}` : 'http://159.203.162.71:5001/add-expense';
         const method = editing ? 'put' : 'post';
 
         try {
@@ -53,7 +53,7 @@ const Expenses = () => {
 
     const deleteExpense = async (id) => {
         try {
-            await axios.delete(`http://localhost:5001/delete-expense/${id}`, { withCredentials: true });
+            await axios.delete(`http://159.203.162.71:5001/delete-expense/${id}`, { withCredentials: true });
             setExpenses(expenses.filter(expense => expense._id !== id));
         } catch (error) {
             console.error('Failed to delete expense:', error);

@@ -3,8 +3,8 @@ describe('Expenses Page Tests', () => {
       // Setup stubs for API calls
       cy.intercept('/expenses').as('getExpenses');
 
-      //cy.intercept('GET', 'http://localhost:5001/expenses', { fixture: 'expenses.json' }).as('getExpenses');
-      //cy.intercept('POST', 'http://localhost:5001/add-expense', (req) => {
+      //cy.intercept('GET', 'http://159.203.162.71:5001/expenses', { fixture: 'expenses.json' }).as('getExpenses');
+      //cy.intercept('POST', 'http://159.203.162.71:5001/add-expense', (req) => {
           //const newExpense = { _id: 'new', ...req.body };
           //req.reply(newExpense);
           // Add the new expense to the existing list to mimic the server's response
@@ -14,7 +14,7 @@ describe('Expenses Page Tests', () => {
        //   });
      // }).as('addExpense');
       cy.intercept('/add-expense').as('addExpense');
-      cy.intercept('DELETE', 'http://localhost:5001/delete-expense/*', { statusCode: 204 }).as('deleteExpense');
+      cy.intercept('DELETE', 'http://159.203.162.71:5001/delete-expense/*', { statusCode: 204 }).as('deleteExpense');
 
       cy.visit('http://localhost:3000/Expenses');  // Adjust the URL to where your Expenses component is rendered
   });

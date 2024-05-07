@@ -7,7 +7,7 @@ const Navbar = () => {
 
   const logout = async () => {
     try {
-      const response = await fetch('http://localhost:5001/logout', {
+      const response = await fetch('http://159.203.162.71:5001/logout', {
         method: 'POST',
         credentials: 'include'  // make sure credentials are included
       });

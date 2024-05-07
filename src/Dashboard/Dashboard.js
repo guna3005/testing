@@ -35,8 +35,8 @@ const Dashboard = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const budgetResponse = await axios.get('http://localhost:5001/budgets', { withCredentials: true });
-                const expenseResponse = await axios.get('http://localhost:5001/expenses', { withCredentials: true });
+                const budgetResponse = await axios.get('http://159.203.162.71:5001/budgets', { withCredentials: true });
+                const expenseResponse = await axios.get('http://159.203.162.71:5001/expenses', { withCredentials: true });
                 if (budgetResponse.data && expenseResponse.data) {
                     prepareChartData(budgetResponse.data, expenseResponse.data);
                 }

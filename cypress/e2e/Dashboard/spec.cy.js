@@ -1,8 +1,8 @@
 describe('Dashboard Page Tests', () => {
   beforeEach(() => {
     // Mocking the API calls
-    cy.intercept('GET', 'http://localhost:5001/budgets', { fixture: 'budgets.json' }).as('fetchBudgets');
-    cy.intercept('GET', 'http://localhost:5001/expenses', { fixture: 'expenses.json' }).as('fetchExpenses');
+    cy.intercept('GET', 'http://159.203.162.71:5001/budgets', { fixture: 'budgets.json' }).as('fetchBudgets');
+    cy.intercept('GET', 'http://159.203.162.71:5001/expenses', { fixture: 'expenses.json' }).as('fetchExpenses');
 
     cy.visit('http://localhost:3000/dashboard');  // Adjust the URL to where your Dashboard component is rendered
 });

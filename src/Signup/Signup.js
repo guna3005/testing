@@ -33,7 +33,7 @@ function Signup() {
             return;
         }
 
-        const baseUrl = 'http://localhost:5001';
+        const baseUrl = 'http://159.203.162.71:5001';
         const url = isSignUp ? `${baseUrl}/signup` : `${baseUrl}/login`;
         const userData = isSignUp ? { name, email, password } : { email, password };
 

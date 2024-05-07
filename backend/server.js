@@ -17,7 +17,7 @@ const PORT = 5001;
 const SECRET_KEY = 'your_secret_key';  // Consider using environment variables for security
 
 app.use(cors({
-  origin: 'http://localhost:3000', // Assuming your React app runs on port 3000
+  origin: ['http://localhost:3000' , "http://159.203.162.71:3000"], // Assuming your React app runs on port 3000
   credentials: true
 }));
 

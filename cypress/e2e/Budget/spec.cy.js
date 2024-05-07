@@ -1,14 +1,14 @@
 describe('Budget Page Tests', () => {
     beforeEach(() => {
         cy.intercept('/budgets').as('getBudgets');
-        cy.intercept('POST', 'http://localhost:5001/add-budget', (req) => {
+        cy.intercept('POST', 'http://159.203.162.71:5001/add-budget', (req) => {
             expect(req.body).to.include.keys('title', 'amount');
             req.reply({
                 statusCode: 201, 
                 body: { _id: '123', ...req.body },
             });
         }).as('addBudget');
-        cy.intercept('DELETE', 'http://localhost:5001/delete-budget/*', { statusCode: 200 }).as('deleteBudget');
+        cy.intercept('DELETE', 'http://159.203.162.71:5001/delete-budget/*', { statusCode: 200 }).as('deleteBudget');
         cy.visit('http://localhost:3000/budget');
     });
   

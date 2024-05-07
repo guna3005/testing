@@ -14,7 +14,7 @@ const Budget = () => {
 
     const fetchBudgets = async () => {
         try {
-            const response = await axios.get('http://localhost:5001/budgets', { withCredentials: true });
+            const response = await axios.get('http://159.203.162.71:5001/budgets', { withCredentials: true });
             setBudgets(response.data);
         } catch (error) {
             console.error('Failed to fetch budgets:', error);
@@ -37,7 +37,7 @@ const Budget = () => {
             return;
         }
     
-        const url = isEditing ? `http://localhost:5001/update-budget/${newBudget._id}` : 'http://localhost:5001/add-budget';
+        const url = isEditing ? `http://159.203.162.71:5001/update-budget/${newBudget._id}` : 'http://159.203.162.71:5001/add-budget';
         const method = isEditing ? 'put' : 'post'; // Use 'put' for both creating and updating for simplicity in this case
     
         try {
@@ -64,7 +64,7 @@ const Budget = () => {
 
     const deleteBudget = async (id) => {
         try {
-            const response = await axios.delete(`http://localhost:5001/delete-budget/${id}`, {
+            const response = await axios.delete(`http://159.203.162.71:5001/delete-budget/${id}`, {
                 withCredentials: true
             });
             if (response.status === 200) {
