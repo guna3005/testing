@@ -1,0 +1,152 @@
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+input[type="lpassword"] {
+    font-family: 'password', monospace; 
+    
+    
+ }
+
+
+body {
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden; /* Ensures no scrollbars appear during transitions */
+}
+
+.cont {
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    width: 900px;
+    height: 550px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    display: flex; /* Centering the content horizontally */
+    justify-content: center; /* Centering the content horizontally */
+    align-items: center; /* Centering the content vertically */
+    transition: transform 1.2s ease-in-out;
+}
+
+.form {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 50%; /* Controls the form width */
+    transition: transform 1.2s ease-in-out;
+    padding: 60px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form.sign-in {
+    left: 0;
+}
+
+.form.sign-up {
+    left: 100%; /* Positioned to the right initially */
+    
+}
+
+.cont.s--signup .form.sign-in {
+    transform: translateX(-100%); /* Moves the sign-in form out of view */
+}
+
+.cont.s--signup .form.sign-up {
+    transform: translateX(-100%); /* Moves the sign-up form into view */
+}
+
+.label,
+label {
+    display: block;
+    margin-bottom: 15px;
+    color: #666;
+    width: 100%; /* Ensures the label takes full width of form */
+}
+
+.label span,
+label span {
+    display: block;
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+.img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: url('https://source.unsplash.com/random/900x550') center/cover no-repeat;
+    transition: transform 1.2s ease-in-out;
+}
+
+.cont.s--signup .img {
+    transform: translateX(-100%); /* Shifts the image to the left */
+}
+
+.img__btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 200px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.7);
+    color: #007bff;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.img__btn:hover {
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.img__btn.left {
+    left: 10%; /* Positioned towards the middle-left of the container */
+}
+
+.img__btn.right {
+    right: 10%; /* Positioned towards the middle-right of the container */
+}
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}

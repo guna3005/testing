@@ -1,0 +1,14 @@
+/* Add to your main stylesheet or create a Layout.css and import it in Layout.js */
+
+.navbar {
+    width: 100%;
+    background-color: #333; /* Example background color */
+    padding: auto auto; /* Example padding */
+    color: white;
+    text-align: center;
+  }
+  
+  .content {
+    margin-top: 50px; /* Adjust based on the height of your navbar */
+  }
+  

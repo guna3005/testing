@@ -1,0 +1,70 @@
+/* Reset margins and padding for the body to remove unwanted space */
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+}
+
+/* General container styles */
+.container-fluid {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+/* Container to ensure full page is scrollable */
+.container {
+    width: 100%;
+    padding: 20px; /* Updated padding to only have top and bottom padding */
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow-y: auto; /* Allows vertical scrolling */
+    height: 100vh; /* Full viewport height */
+}
+
+/* Styling for the charts container */
+.charts {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 20px; /* Spacing between charts */
+    padding-bottom: 20px; /* Add some padding at the bottom for better spacing */
+}
+
+/* Card styling for consistent UI */
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+}
+
+/* Footer styling */
+.app-footer {
+    font-size: 16px;
+    background-color: #428bca;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+/* Responsive grid adjustments */
+@media (max-width: 768px) {
+    .chart-container, .card {
+        margin-top: 10px;
+    }
+    .charts {
+        grid-template-columns: 1fr; /* Single column on smaller screens */
+    }
+}
+
+/* Typography adjustments for titles within cards and charts */
+h5 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 15px;
+}

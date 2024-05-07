@@ -1,0 +1,17 @@
+[
+    {
+        "_id": "1",
+        "title": "Housing",
+        "amount": 1200
+    },
+    {
+        "_id": "2",
+        "title": "Food",
+        "amount": 300
+    },
+    {
+        "_id": "3",
+        "title": "Utilities",
+        "amount": 150
+    }
+]

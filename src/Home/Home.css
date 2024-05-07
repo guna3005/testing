@@ -1,0 +1,34 @@
+.home-container {
+    font-family: Arial, sans-serif;
+}
+
+.app-navbar {
+    background-color: #d2dfec;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.welcome-content {
+    margin: 20px;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.image {
+    width: 100%;
+    max-width: 600px;
+    margin-top: 20px;
+}
+
+.app-footer {
+    background-color: #428bca;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

@@ -1,0 +1,38 @@
+/* Navbar.css */
+.navbar {
+    position: fixed; /* Fix the navbar's position relative to the viewport */
+    top: 0;          /* Align the top edge of the navbar with the top of the viewport */
+    left: 0;         /* Align the left edge of the navbar with the left of the viewport */
+    right: 0;        /* Stretch the navbar to cover the entire horizontal space of the viewport */
+    z-index: 1000;   /* Ensure the navbar stays on top of other content */
+    background-color: #333; /* Example background color */
+    color: white;
+    padding: 10px 20px; /* Example padding */
+  }
+  
+  .nav-links {
+    display: flex;
+    list-style: none;
+    justify-content: space-around; /* Evenly distribute space between navbar links */
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-links li a {
+    color: white; /* Color of the links */
+    text-decoration: none; /* No underline */
+    padding: 10px; /* Padding for clickable area */
+  }
+  
+  .nav-links li a:hover {
+    text-decoration: underline; /* Underline on hover */
+  }
+  
+  .logoutbtn{
+    display: flex;
+    list-style: none;
+    justify-content: space-around; /* Evenly distribute space between navbar links */
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+  }

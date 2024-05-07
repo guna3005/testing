@@ -1,0 +1,17 @@
+[
+    {
+      "_id": "1",
+      "category": "Transport",
+      "amount": 150,
+      "date": "2024-01-01",
+      "comment": "Monthly bus pass"
+    },
+    {
+      "_id": "2",
+      "category": "Food",
+      "amount": 300,
+      "date": "2024-01-02",
+      "comment": "Groceries"
+    }
+  ]
+  
